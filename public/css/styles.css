@@ -1,0 +1,63 @@
+body {
+  background: red;
+}
+
+#screen4 {
+  width:85%;
+  max-width: 700px;
+  margin: 0;
+   position: absolute;
+   height: 65%;
+   top: 50%;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%) rotate(8deg); /* IE 9 */
+   -webkit-transform: translate(-50%, -50%) rotate(8deg); /* Safari */
+   transform: translate(-50%, -50%) rotate(8deg);
+   background:pink;
+   z-index: 0;
+}
+
+#screen3 {
+  width:85%;
+  max-width: 700px;
+  margin: 0;
+   position: absolute;
+   height: 65%;
+   top: 50%;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%) rotate(5deg); /* IE 9 */
+   -webkit-transform: translate(-50%, -50%) rotate(5deg); /* Safari */
+   transform: translate(-50%, -50%) rotate(5deg);
+   background:blue;
+   z-index: 1;
+}
+
+#screen2 {
+  width:85%;
+  max-width: 700px;
+  margin: 0;
+   position: absolute;
+   height: 65%;
+   top: 50%;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%) rotate(2deg); /* IE 9 */
+   -webkit-transform: translate(-50%, -50%) rotate(2deg); /* Safari */
+   transform: translate(-50%, -50%) rotate(2deg);
+   background:green;
+   z-index: 2;
+}
+
+#screen1 {
+  width:85%;
+  max-width: 700px;
+  margin: 0;
+   position: absolute;
+   height: 65%;
+   top: 50%;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%) rotate(0deg); /* IE 9 */
+   -webkit-transform: translate(-50%, -50%) rotate(0deg); /* Safari */
+   transform: translate(-50%, -50%) rotate(0deg);
+   background:yellow;
+   z-index: 3;
+}

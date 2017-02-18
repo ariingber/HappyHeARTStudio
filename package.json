@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ariingber/HappyHeARTStudio/issues"
   },
-  "homepage": "https://github.com/ariingber/HappyHeARTStudio#readme"
+  "homepage": "https://github.com/ariingber/HappyHeARTStudio#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
 }
