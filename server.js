@@ -2,6 +2,9 @@ var express = require('express')
 var app = express()
 var path    = require("path");
 
+var port = process.env.PORT || 4000;
+var server = app.listen(port);
+
 app.use(express.static(path.join(__dirname, './public/')));
 
 
