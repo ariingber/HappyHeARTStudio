@@ -1,9 +1,7 @@
 $(function(){
   $('#next').on('click', next)
-  $( ".mobileDisplay" ).on( "swiperight", next );
 
   $('#prev').on('click', prev)
-  $( ".mobileDisplay" ).on( "swipeleft", prev );
 
   $("body").keydown(function(e) {
     if(e.keyCode == 37) {
@@ -19,14 +17,21 @@ $(function(){
     // caches currently viewed and other cards
     var $current = $('.seen')
     var $unseen = $('.mobileDisplay').not('.seen');
+    $current.animate({
+      opacity: .2
+    }, 500, function() {
+      // sets z-index of currently viewd card to 0
+      $current.css("z-index",'0');
 
-    // sets z-index of currently viewd card to 0
-    $current.css("z-index",'0');
+      // adds 1 to z-index of each other card
+      $unseen.each( function () {
+        $(this).css("z-index",(parseInt($(this).css("z-index")) + 1 + ''));
+      });
+    }).animate({
+      opacity: 1
+    }, 500 );
 
-    // adds 1 to z-index of each other card
-    $unseen.each( function () {
-      $(this).css("z-index",(parseInt($(this).css("z-index")) + 1 + ''));
-    });
+
 
     // annimates movement of viewd card
 
@@ -41,6 +46,11 @@ $(function(){
   };
 
   function prev() {
+    $('.seen').animate({
+      opacity:.2
+    }, 500).animate({
+      opacity:1
+    }, 500)
     // get z-indexes right on prev
     $(".mobileDisplay").each(function() {
       if ($(this).css('z-index') == 0) {
@@ -58,6 +68,33 @@ $(function(){
         $(this).addClass("seen");
       }
     });
+  }
+
+// TINDER FUNCTIONS
+  var touchstartX = 0;
+  var touchendX = 0;
+
+  var gesuredZone = document.getElementById('gesuredZone');
+
+  gesuredZone.addEventListener('touchstart', function(event) {
+      touchstartX = event.changedTouches[0].screenX;
+      touchstartY = event.changedTouches[0].screenY;;
+  }, false);
+
+  gesuredZone.addEventListener('touchend', function(event) {
+      touchendX = event.changedTouches[0].screenX;
+      touchendY = event.changedTouches[0].screenY;;
+      handleGesure();
+  }, false);
+
+  function handleGesure() {
+      var swiped = 'swiped: ';
+      if (touchendX < touchstartX) {
+          prev();
+      }
+      if (touchendX > touchstartX) {
+          next();
+      }
   }
 
 });
