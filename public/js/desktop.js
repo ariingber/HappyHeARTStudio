@@ -7,4 +7,15 @@ $(function(){
     $('#container').remove();
     $('#content').load(url + ' #container').hide().fadeIn('slow');
     })
+
+
+    $( window ).resize(function() {
+      if (screen.width>600) {
+          $("#title").css('font-size', '400%');
+      }
+      else if (screen.width<=600)  {
+        $("#title").css('font-size', '45px');
+      }
+    });
+
 });
