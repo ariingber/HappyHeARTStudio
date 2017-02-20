@@ -17,19 +17,10 @@ $(function(){
     // caches currently viewed and other cards
     var $current = $('.seen')
     var $unseen = $('.mobileDisplay').not('.seen');
-    $current.animate({
-      opacity: .2
-    }, 500, function() {
-      // sets z-index of currently viewd card to 0
-      $current.css("z-index",'0');
-
-      // adds 1 to z-index of each other card
-      $unseen.each( function () {
-        $(this).css("z-index",(parseInt($(this).css("z-index")) + 1 + ''));
-      });
-    }).animate({
-      opacity: 1
-    }, 500 );
+    $current.css("z-index",'0');
+    $unseen.each( function () {
+      $(this).css("z-index",(parseInt($(this).css("z-index")) + 1 + ''));
+    });
 
 
 
@@ -46,11 +37,6 @@ $(function(){
   };
 
   function prev() {
-    $('.seen').animate({
-      opacity:.2
-    }, 500).animate({
-      opacity:1
-    }, 500)
     // get z-indexes right on prev
     $(".mobileDisplay").each(function() {
       if ($(this).css('z-index') == 0) {
