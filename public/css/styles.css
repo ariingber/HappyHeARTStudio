@@ -18,10 +18,9 @@ body {
    position: relative;
    width: 100%; /* for IE 6 */
 }
-h1 {
-  text-align: center;
+.cardText {
    position: absolute;
-   top: 7%;
+   top: 3%;
    left: 0;
    width: 100%;
    color:white;
