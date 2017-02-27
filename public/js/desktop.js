@@ -15,18 +15,21 @@ $(function(){
     var value = $(window).width();
      if (value > 600) {
        $('#handbookLink').show();
+       $("#map").show();
        $('#pushArtButton').css("float", "none");
      } else if ((value <= 600) && (value > 500)){
        $('#handbookLink').hide();
        $('#pushArtButton').css("float", "right");
        $("#mainTitle").text("happy heART studio");
        $( "h2" ).css( "font-size", "60px" )
+       $("#map").show();
      }
      else if (value < 500) {
        $('#handbookLink').hide();
        $('#pushArtButton').css("float", "right");
        $("#mainTitle").text("happy heART");
-       $( "h2" ).css( "font-size", "12px" )
+       $( "h2" ).css( "font-size", "16px" )
+       $("#map").hide();
      }
 
     // if ( $(window).width()  > 500) {
