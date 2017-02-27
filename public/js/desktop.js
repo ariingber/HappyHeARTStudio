@@ -1,4 +1,35 @@
 $(function(){
+
+  function windowChangesHeight () {
+    if ( $(window).height() > 700 ) {
+      $('#arrowDiv').show();
+      $('.mobileDisplay').css("top", "50%");
+    }
+    else if ( $(window).height() <= 700 )  {
+      $('#arrowDiv').hide();
+      $('.mobileDisplay').css("top", "60%");
+    }
+  };
+
+  function windowChangesWidth () {
+    if ( $(window).width()  > 500) {
+      $('#handbookLink').show();
+      $('#pushArtButton').css("float", "none");
+    }
+    else if ( $(window).width() <= 500 )  {
+      $('#handbookLink').hide();
+      $('#pushArtButton').css("float", "right");
+    }
+  };
+  windowChangesHeight();
+  windowChangesWidth();
+
+  $( window ).resize(function() {
+    windowChangesHeight();
+    windowChangesWidth();
+  });
+
+
   $('nav a').on('click', function(e) {
     e.preventDefault();
     var url = this.href;
@@ -8,29 +39,15 @@ $(function(){
     $('#content').load(url + ' #container').hide().fadeIn('slow');
     })
 
-
-    $( window ).resize(function() {
-      if ( $(window).width()  > 500) {
-        $('#handbookLink').show();
-        $('#pushArtButton').css("float", "none");
-      }
-      else if ( $(window).width() <= 500 )  {
-        $('#handbookLink').hide();
-        $('#pushArtButton').css("float", "right");
-      }
-    });
-
-    $( window ).resize(function() {
-      if ( $(window).height() > 500 ) {
-        console.log('greater')
-        $('#arrowDiv').show();
-        $('.mobileDisplay').show();
-      }
-      else if ( $(window).height() <= 500 )  {
-        console.log('lessthan')
-        $('#arrowDiv').hide();
-        $('.mobileDisplay').hide();
-      }
-    });
+    // $( window ).resize(function() {
+    //   if ( $(window).height() > 700 ) {
+    //     $('#arrowDiv').show();
+    //     $('.mobileDisplay').css("top", "50%");
+    //   }
+    //   else if ( $(window).height() <= 700 )  {
+    //     $('#arrowDiv').hide();
+    //     $('.mobileDisplay').css("top", "60%");
+    //   }
+    // });
 
 });
