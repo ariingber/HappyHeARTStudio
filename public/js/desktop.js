@@ -17,12 +17,15 @@ $(function(){
        $('#handbookLink').show();
        $("#map").show();
        $('#pushArtButton').css("float", "none");
+       $( "h2" ).css( "font-size", "30px" )
+       $("#pushArtButton").text("see kids' art!");
      } else if ((value <= 600) && (value > 500)){
        $('#handbookLink').hide();
        $('#pushArtButton').css("float", "right");
        $("#mainTitle").text("happy heART studio");
-       $( "h2" ).css( "font-size", "60px" )
+       $( "h2" ).css( "font-size", "25px" )
        $("#map").show();
+       $("#pushArtButton").text('next');
      }
      else if (value < 500) {
        $('#handbookLink').hide();
@@ -30,6 +33,7 @@ $(function(){
        $("#mainTitle").text("happy heART");
        $( "h2" ).css( "font-size", "14px" )
        $("#map").hide();
+       $("#pushArtButton").text('next');
      }
 
     // if ( $(window).width()  > 500) {
