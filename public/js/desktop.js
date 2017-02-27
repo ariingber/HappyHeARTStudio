@@ -26,7 +26,7 @@ $(function(){
        $('#handbookLink').hide();
        $('#pushArtButton').css("float", "right");
        $("#mainTitle").text("happy heART");
-       $( "h2" ).css( "font-size", "2px" )
+       $( "h2" ).css( "font-size", "12px" )
      }
 
     // if ( $(window).width()  > 500) {
