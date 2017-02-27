@@ -10,11 +10,26 @@ $(function(){
 
 
     $( window ).resize(function() {
-      if (screen.width>600) {
-          $("#title").css('font-size', '400%');
+      if ( $(window).width()  > 500) {
+        $('#handbookLink').show();
+        $('#pushArtButton').css("float", "none");
       }
-      else if (screen.width<=600)  {
-        $("#title").css('font-size', '45px');
+      else if ( $(window).width() <= 500 )  {
+        $('#handbookLink').hide();
+        $('#pushArtButton').css("float", "right");
+      }
+    });
+
+    $( window ).resize(function() {
+      if ( $(window).height() > 500 ) {
+        console.log('greater')
+        $('#arrowDiv').show();
+        $('.mobileDisplay').show();
+      }
+      else if ( $(window).height() <= 500 )  {
+        console.log('lessthan')
+        $('#arrowDiv').hide();
+        $('.mobileDisplay').hide();
       }
     });
 

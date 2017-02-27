@@ -126,3 +126,15 @@ form {
    transform: translate(-50%, -50%) rotate(0deg);
    z-index: 4;
 }
+
+.float_center {
+  float: right;
+
+  position: relative;
+  left: -50%; /* or right 50% */
+  text-align: left;
+}
+.float_center > .child {
+  position: relative;
+  left: 50%;
+}
