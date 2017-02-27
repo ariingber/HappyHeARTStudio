@@ -13,16 +13,16 @@ $(function(){
 
   function windowChangesWidth () {
     var value = $(window).width();
-     if (value > 600) {
+     if (value > 650) {
        $('#handbookLink').show();
        $('#pushArtButton').css("float", "none");
-     } else if ((value <= 600) && (value > 550)){
+     } else if ((value <= 650) && (value > 600)){
        $('#handbookLink').hide();
        $('#pushArtButton').css("float", "right");
        $("#mainTitle").text("happy heART studio");
        $( "h2" ).css( "font-size", "60px" )
      }
-     else if (value < 550) {
+     else if (value < 600) {
        $('#handbookLink').hide();
        $('#pushArtButton').css("float", "right");
        $("#mainTitle").text("happy heART");
