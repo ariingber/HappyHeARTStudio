@@ -13,10 +13,10 @@ $(function(){
 
   function windowChangesWidth () {
     var value = $(window).width();
-     if (value > 450) {
+     if (value > 475) {
        $('#handbookLink').show();
        $('#pushArtButton').css("float", "none");
-     } else if ((value <= 450) && (value > 450)){
+     } else if ((value <= 475) && (value > 450)){
        $('#handbookLink').hide();
        $('#pushArtButton').css("float", "right");
        $("#mainTitle").text("happy heART studio");
