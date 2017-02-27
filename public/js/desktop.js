@@ -12,14 +12,31 @@ $(function(){
   };
 
   function windowChangesWidth () {
-    if ( $(window).width()  > 500) {
-      $('#handbookLink').show();
-      $('#pushArtButton').css("float", "none");
-    }
-    else if ( $(window).width() <= 500 )  {
-      $('#handbookLink').hide();
-      $('#pushArtButton').css("float", "right");
-    }
+    var value = $(window).width();
+     if (value > 450) {
+       $('#handbookLink').show();
+       $('#pushArtButton').css("float", "none");
+     } else if ((value <= 450) && (value > 450)){
+       $('#handbookLink').hide();
+       $('#pushArtButton').css("float", "right");
+       $("#mainTitle").text("happy heART studio");
+       $( "h2" ).css( "font-size", "60px" )
+     }
+     else if (value < 450) {
+       $('#handbookLink').hide();
+       $('#pushArtButton').css("float", "right");
+       $("#mainTitle").text("happy heART");
+       $( "h2" ).css( "font-size", "19px" )
+     }
+
+    // if ( $(window).width()  > 500) {
+    //   $('#handbookLink').show();
+    //   $('#pushArtButton').css("float", "none");
+    // }
+    // else if ( $(window).width() <= 500 )  {
+    //   $('#handbookLink').hide();
+    //   $('#pushArtButton').css("float", "right");
+    // }
   };
   windowChangesHeight();
   windowChangesWidth();
