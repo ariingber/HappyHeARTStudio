@@ -2,12 +2,18 @@ $(function(){
 
   function windowChangesHeight () {
     if ( $(window).height() > 700 ) {
-      $('#arrowDiv').show();
+      $('#address').show();
+      $('#handbookLink').show();
+      $('#pushArtButton').show();
       $('.mobileDisplay').css("top", "50%");
+      $('#lighttop').css("top", "8%");
     }
     else if ( $(window).height() <= 700 )  {
-      $('#arrowDiv').hide();
-      $('.mobileDisplay').css("top", "60%");
+      $('#address').hide();
+      $('#handbookLink').hide();
+      $('#pushArtButton').hide();
+      $('.mobileDisplay').css("top", "50%");
+      $('#lighttop').css("top", "2%");
     }
   };
 
@@ -18,14 +24,19 @@ $(function(){
        $("#map").show();
        $('#pushArtButton').css("float", "none");
        $( "h2" ).css( "font-size", "30px" )
-       $("#pushArtButton").text("see kids' art!");
+       $('.mobileDisplay').css("margin-top", "5px")
+       $('#prev').css("margin-top", "5px");
+       $('#next').css("margin-top", "5px");
+
      } else if ((value <= 600) && (value > 500)){
        $('#handbookLink').hide();
        $('#pushArtButton').css("float", "right");
        $("#mainTitle").text("happy heART studio");
        $( "h2" ).css( "font-size", "25px" )
        $("#map").show();
-       $("#pushArtButton").text('next');
+       $('.mobileDisplay').css("margin-top", "5px")
+       $('#prev').css("margin-top", "5px");
+       $('#next').css("margin-top", "5px");
      }
      else if (value < 500) {
        $('#handbookLink').hide();
@@ -33,7 +44,14 @@ $(function(){
        $("#mainTitle").text("happy heART");
        $( "h2" ).css( "font-size", "14px" )
        $("#map").hide();
-       $("#pushArtButton").text('next');
+       $('#address').hide();
+       $('#handbookLink').hide();
+       $('#pushArtButton').hide();
+       $('.mobileDisplay').css("top", "50%");
+       $('#lighttop').css("top", "2%");
+       $('.mobileDisplay').css("margin-top", "-70px");
+       $('#prev').css("margin-top", "-90px");
+       $('#next').css("margin-top", "-90px");
      }
 
     // if ( $(window).width()  > 500) {
