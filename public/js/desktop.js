@@ -49,9 +49,9 @@ $(function(){
        $('#pushArtButton').hide();
        $('.mobileDisplay').css("top", "50%");
        $('#lighttop').css("top", "2%");
-       $('.mobileDisplay').css("margin-top", "-40px");
-       $('#prev').css("margin-top", "-70px");
-       $('#next').css("margin-top", "-70px");
+       $('.mobileDisplay').css("margin-top", "-20px");
+       $('#prev').css("margin-top", "-40px");
+       $('#next').css("margin-top", "-40px");
      }
 
     // if ( $(window).width()  > 500) {
